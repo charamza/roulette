@@ -1,0 +1,38 @@
+#wrapper {
+    display: block;
+    width: calc(129px * 5);
+    margin: 20px auto 0;
+}
+#roulette {
+    border: 3px solid #000;
+    overflow: hidden;
+    height: 128px;
+    white-space: nowrap;
+    position: relative;
+}
+#roulette::after {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 128px;
+	height: 128px;
+	border: 3px solid #000;
+	content: ' ';
+	top: -3px;
+}
+#roulette .roulette-item {
+    width: 128px;
+    height: 128px;
+    display: inline-block;
+}
+#roulette .roulette-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+}
+#roulette-buttons {
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
