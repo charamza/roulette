@@ -71,7 +71,7 @@ class Roulette {
     }
 
     render() {
-        const off = this.interpolator(this.progress);
+        const off = this.interpolator(this.progress) * this.SIZE * this.LENGTH;
         const WIDTH = this.SIZE * 6;
 
         for (let i = 0; i < 6; i++) {
@@ -96,7 +96,7 @@ class Roulette {
     }
 
     interpolator(val) {
-        return Math.pow(Math.sin(val * Math.PI / 2), 2) * this.SIZE * this.LENGTH;
+        return Math.pow(Math.sin(val * Math.PI / 2), 2.6);
     }
 
     getItem(val) {
